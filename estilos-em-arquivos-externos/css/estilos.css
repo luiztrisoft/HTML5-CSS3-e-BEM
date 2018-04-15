@@ -1,4 +1,5 @@
 
+/*seletores agrupados
 #titulo, .missao {
 	font-family: Arial;
 }
@@ -6,4 +7,21 @@
 .introducao, .missao{
 	color: red;
 }
+*/
 
+/*seletores descendentes
+.missao strong {
+	color: green;
+}
+*/
+
+/*seletores descendentes
+article .missao strong {
+	color: red;
+}
+*/
+
+/*seletores de filhos diretos*/
+article > .importante > strong {
+	color: green;
+}
