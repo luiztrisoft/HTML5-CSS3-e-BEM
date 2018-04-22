@@ -3,25 +3,46 @@
 #titulo, .missao {
 	font-family: Arial;
 }
-
 .introducao, .missao{
 	color: red;
 }
 */
-
+/*===========================*/
 /*seletores descendentes
 .missao strong {
 	color: green;
 }
 */
-
+/*===========================*/
 /*seletores descendentes
 article .missao strong {
 	color: red;
 }
 */
-
-/*seletores de filhos diretos*/
+/*===========================*/
+/*seletores de filhos diretos
 article > .importante > strong {
 	color: green;
+}
+*/
+/*===========================*/
+/*cores*/
+.caixa1 {
+	background-color: blue;
+	color: white;
+}
+.caixa2 {
+	background-color: rgb(255, 0, 0);
+	color: rgb(255,255,255);
+}
+.caixa3 {
+	background-color: rgb(255,200,0);
+	color: rgb(255,255,255);
+}
+.caixa4 {
+	background-color: #ff00c8;
+	color: #ddff00
+}
+.caixa5 {
+	background-color: #df0;
 }

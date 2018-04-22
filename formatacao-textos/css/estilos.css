@@ -1,0 +1,15 @@
+.nome{
+	color: #f00;
+	font-size: 24px;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+
+	text-decoration: line-through;
+}
+
+.segmento{
+	font:italic bold 24px Arial;
+	text-decoration: underline;
+	text-align: justify;
+}
