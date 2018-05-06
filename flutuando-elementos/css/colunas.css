@@ -46,3 +46,24 @@ h1::before{
 h1:after {
   content: " - Artigo"
 }
+
+article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
