@@ -1,0 +1,99 @@
+Evitar copiar e colar codigos
+Nome autoexplicativos
+Mover codigo html para outro lugar ou outra pagina sem gerar problemas
+
+Algumas metodologias 
+OOCSS
+SMACSS
+BEM (block element modifier)
+http://getbem.com
+
+
+BLOCK:
+
+Identificar mentalmente blocos ou partes de layout que podemos reaproveitar e trabalhar de formas independentes
+menublock
+logoblock
+authblock
+headblock
+E tudo que foi especificado acima pode ser um cabecalhoblock. No entanto os componentes internos nao podem ser afetados por ele
+Os blocos podem ser movidos para outras partes da pagina ou outras paginas sem problemas com o layout
+
+
+ELEMENT:
+
+[Tab1 Tab2 Tab3 Tab4]
+Cada tab é um elemento do bloco de abas
+Elemento sem bloco não funciona. Podemos ter um bloco sem elemento apesar de não fazer sentido
+
+
+MODIFIER:
+
+As Tabs podem ser usadas como abas ou botões de um menu
+Através de um modificador usamos uma marcação/flag para mudar a aparencia, estado ou comportamento do bloco ou Elemento
+"Em determinado local ele deve ser um menu em outros é apresentado como botões"
+
+Componentizar elementos de forma que podemos colocar um dentro do outro e reaproveita-los. Mas NUNCA estes elementos e blocos devem ser dependentes de outros
+
+
+1. Para nomear use o nome que represente aquele determinado bloco
+portfolio (é uma lista de cursos)
+2. No elemento usamos o nome do bloco seguindo de dois undercores e o nome do elemento
+portfolio__curso
+3. Modificado é o nome do bloco seguido de dois hifens e do nome do modificador. Se o modificador foi do elemento entao a regra é bloco__elemento--modificador
+portfolio--mais-vendidos
+
+
+Repare que sabemos que portifolio__curso pertence a portifolio. Se ele se chamasse apenas curso não teriamos ideia de onde ele pertence
+
+<ul class="portfolio portfolio--mais-vendidos">
+    <li class="portfolio__curso"><a href="#">HTML e CSS</a></li>
+    <li class="portfolio__curso portfolio__curso--novo"><a href="#">JavaScript</a></li>
+    <li class="portfolio__curso"><a href="#">Java e Orientação a Objetos</a></li>
+</ul>
+
+/*-----------------------\*
+  PORTFOLIO
+\*-----------------------*/
+.portfolio {
+  font-size: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.portfolio--mais-vendidos .portfolio__curso {
+  background-color: green;
+}
+
+.portfolio__curso {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  margin-bottom: 20px;
+  float: left;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.portfolio__curso > a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+.portfolio__curso--novo::after {
+  content: "Novo";
+  display: block;
+  font-size: 24px;
+  margin: 0 20%;
+  margin-top: 30px;
+  background-color: yellow;
+}
