@@ -1,6 +1,16 @@
 .layout-cabecalho {
     height: 60px;
     border-bottom: 1px solid #ccc;
+
+    background-color: #fff;
+  }
+
+  .layout-cabecalho--home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
   }
   
   .layout-cabecalho img {
@@ -13,6 +23,7 @@
 
   .layout-chamada {
     padding: 80px 0;
+    margin-top: 60px;
   
     background-color: #7ab55c;
   }
@@ -20,4 +31,13 @@
   .layout-depoimento {
     padding: 80px 0;
     background-color: #e7e7e7;
+  }
+
+  .layout-rodape{
+    padding: 40px 0;
+
+    background-color: #484848;
+
+    color: #fff;
+    text-align: center;
   }
